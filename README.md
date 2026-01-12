@@ -47,6 +47,24 @@ We do NOT care about:
   * Getting every single edge case 
     * That said, you should handle the fact that tokens can split the triple backticks. And that there can be multiple state transitions within one token (e.g. backtick, word, backtick, word, tripple backtick is a valid token)
 
+## Output Examples
+
+The parser successfully renders streaming Markdown with proper styling:
+
+### Initial Stream
+![Stream Start](screenshots/stream-start.png)
+
+### Rendered Output
+![Rendered Markdown](screenshots/rendered-output.png)
+
+The implementation correctly handles:
+- **Code blocks** (triple backticks) with dark background styling
+- **Inline code** (single backticks) with light gray background
+- **Headings, bold, italics, and lists** with appropriate semantic HTML
+- **Optimistic rendering** - styling applied immediately as delimiters are detected
+- **Token splitting** - correctly handles backticks split across tokens
+- **Text selectability** - preserves DOM structure for user text selection
+
 ## Other notes
 * You do not need any fancy algorithms or data structures for this. This problem is meant to be relatively straightforward, and your code's efficiency doesn't matter.
 * Feel free to use the Internet and an AI autocomplete (e.g. Cursor Tab, Copilot). Please do not use any frontier models (sonnet, 4o, o1, etc.). 
