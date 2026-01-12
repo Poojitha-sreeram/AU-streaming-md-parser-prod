@@ -53,9 +53,11 @@ The parser successfully renders streaming Markdown with proper styling:
 
 ### Initial Stream
 ![Stream Start](screenshots/stream-start.png)
+*Initial state showing the STREAM button before markdown content is streamed in*
 
 ### Rendered Output
 ![Rendered Markdown](screenshots/rendered-output.png)
+*Full markdown output with code blocks styled in dark background and inline code in light gray*
 
 The implementation correctly handles:
 - **Code blocks** (triple backticks) with dark background styling
